@@ -1,0 +1,21 @@
+{
+  "name": "cb15pt_assignment_part_b",
+  "version": "1.0.0",
+  "description": "Assignment 1 Part B",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thanos Tsoustas",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.3.3",
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0"
+  }
+}
