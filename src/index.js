@@ -40,15 +40,15 @@ listOfAssignmentsPerCourse(connection)
 
 listOfAssignmentsPerCoursePerStudent(connection)
   .then((data) => {
-    const l = groupBy("full_name")(data);
+    const firstLevel = groupBy("full_name")(data);
 
-    return keys(l).reduce((fArr, key) => {
-      let v = groupBy("assignTitle")(l[key]);
+    return keys(firstLevel).reduce((fArr, key) => {
+      let secondLevel = groupBy("assignTitle")(firstLevel[key]);
 
-      let vl = map(values(v), (path) =>
+      let thirdLevel = map(values(secondLevel), (path) =>
         map(path, (item) => omit(item, ["full_name", "assignTitle"]))
       );
-      return [...fArr, { [key]: flatMap(vl) }];
+      return [...fArr, { [key]: flatMap(thirdLevel) }];
     }, []);
   })
   .then(console.log);
