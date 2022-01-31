@@ -1,5 +1,4 @@
 const prompt = require("prompt");
-const connection = require("../config");
 
 const schema = {
   properties: {
@@ -41,5 +40,5 @@ const insertCourses = async (connection) => {
   console.log("One line added");
   await conn.end();
 };
-insertCourses(connection).then();
+
 module.exports = insertCourses;
