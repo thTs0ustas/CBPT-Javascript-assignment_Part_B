@@ -18,6 +18,8 @@ const insertStudents = require("./inserts/insertStudents");
 const insertTrainers = require("./inserts/insertTrainers");
 const insertCourses = require("./inserts/insertCourses");
 const insertAssignments = require("./inserts/insertAssignments");
+const insertStudentPerCourse = require("./inserts/insertStudentPerCourse");
+const insertTrainerPerCourse = require("./inserts/insertStudentPerCourse");
 
 const promptMessages = async () => {
   prompt.start();
@@ -95,6 +97,12 @@ const promptMessages = async () => {
         break;
       case 3:
         insertAssignments(connection).catch(console.log);
+        break;
+      case 4:
+        insertStudentPerCourse(connection).catch(console.log);
+        break;
+      case 5:
+        insertTrainerPerCourse(connection).catch(console.log);
         break;
     }
   }

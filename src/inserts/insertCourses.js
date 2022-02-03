@@ -4,16 +4,16 @@ const schema = {
   properties: {
     title: {
       pattern: /^CB\w+-(PT|FT)$/,
-      message: "Input course title ex. CBJava-PT",
+      message: "Input course title eg. CBJava-PT",
       required: true,
     },
     stream: {
-      message: "Input course stream ex. Java",
+      message: "Input course stream eg. Java",
       required: true,
     },
     type: {
       pattern: /PT|FT/,
-      message: "Input course type ex. PT(Part Time) FT(Full Time)",
+      message: "Input course type eg. PT(Part Time) FT(Full Time)",
       required: true,
     },
     StartDate: {

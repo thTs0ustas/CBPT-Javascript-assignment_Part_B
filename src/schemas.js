@@ -12,11 +12,14 @@ const schemas = {
   insert: {
     properties: {
       insert: {
-        pattern: /[0-3]/,
+        pattern: /[0-6]/,
         description: `Insert student: "0".
                       Insert trainer: "1". 
                       Insert course: "2".
-                      Insert assignment: "3"`,
+                      Insert assignment: "3".
+                      Insert student per course: "4".
+                      Insert trainer per course: "5".
+                      Insert assignments per course per student: "6"`,
         require: true,
       },
     },
@@ -25,10 +28,10 @@ const schemas = {
     properties: {
       select: {
         pattern: /[0-7]/,
-        description: `Select student: "0".
-                      Select trainer: "1". 
-                      Select course: "2".
-                      Select assignment: "3"
+        description: `Select students: "0".
+                      Select trainers: "1". 
+                      Select courses: "2".
+                      Select assignments: "3"
                       Select assignmentPerCourse: "4"
                       Select studentsPerCourse: "5"
                       Select trainersPerCourse: "6"
